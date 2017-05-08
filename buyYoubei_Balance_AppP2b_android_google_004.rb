@@ -60,9 +60,9 @@ dr.find_elements(:id, 'com.richfinancial.pujiaosuo:id/tabname')[2].click
 sleep 3
 dr.find_element(:id, 'com.richfinancial.pujiaosuo:id/tab_all_investing_product_list_right').click
 sleep 3
-Appium::TouchAction.new.press(x: 520, y: 1600).wait(1000).move_to(x: 520, y: 100).release().perform
+Appium::TouchAction.new.press(x: 520, y: 1600).wait(1000).move_to(x: 520, y: 50).release().perform
 sleep 2
-Appium::TouchAction.new.press(x: 520, y: 1600).wait(1000).move_to(x: 520, y: 100).release().perform
+Appium::TouchAction.new.press(x: 520, y: 1600).wait(1000).move_to(x: 520, y: 50).release().perform
 sleep 2
 dr.find_element(:uiautomator, 'new UiSelector().text("优贝90 14期")').click
 #dr.find_elements(:id, 'com.richfinancial.pujiaosuo:id/product_title')[0].click
