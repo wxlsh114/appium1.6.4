@@ -18,7 +18,7 @@ class AppP2b(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '6.0'
         desired_caps['automationName'] = 'UIAutomator2'
-        desired_caps['app'] = PATH('51p2b_debug_2.4.5.apk')
+        desired_caps['app'] = PATH('/users/samwang/desktop/51p2b_debug_2.4.5.apk')
         desired_caps['appPackage'] = 'com.richfinancial.pujiaosuo'
         desired_caps['deviceName'] = 'emulator-5554'
         desired_caps['unicodeKeyboard'] = True
