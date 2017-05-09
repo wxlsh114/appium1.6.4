@@ -18,7 +18,7 @@ class AppP2b(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '6.0'
         desired_caps['automationName'] = 'UIAutomator2'
-        desired_caps['app'] = PATH('/users/samwang/desktop/51p2b_debug_2.4.5.apk')
+        desired_caps['app'] = PATH('51p2b_debug_2.4.5.apk')
         desired_caps['appPackage'] = 'com.richfinancial.pujiaosuo'
         desired_caps['deviceName'] = 'emulator-5554'
         desired_caps['unicodeKeyboard'] = True
@@ -88,12 +88,6 @@ class AppP2b(unittest.TestCase):
         sleep(2)
         driver.find_element_by_id('com.richfinancial.pujiaosuo:id/pay_now').click()
         sleep(5)
-        """
-        if driver.find_element_by_android_uiautomator('new UiSelector().text("知道了")').is_displayed():
-            driver.find_element_by_android_uiautomator('new UiSelector().text("知道了")').click()
-            sleep(1)
-        sleep(1)
-        """
         driver.find_element_by_android_uiautomator('new UiSelector().text("我的")').click()
         sleep(3)
         driver.find_element_by_android_uiautomator('new UiSelector().text("优贝赚呗投资记录")').click()
@@ -109,6 +103,28 @@ class AppP2b(unittest.TestCase):
         sf3='./'+now+'_004_inv_detail_google.png'
         driver.save_screenshot(sf3)
         sleep(3)
+        driver.find_element_by_id("com.richfinancial.pujiaosuo:id/layout_title_view_return").click()
+        sleep(3)
+        driver.find_element_by_id("com.richfinancial.pujiaosuo:id/layout_title_view_return").click()
+        sleep(3)
+        driver.swipe(540,1000,540,300,1000)
+        sleep(2)
+        driver.find_element_by_android_uiautomator('new UiSelector().text("账户余额（元）")').click()
+        sleep(2)
+        driver.find_element_by_android_uiautomator('new UiSelector().text("查看余额明细")').click()
+        sleep(2)
+        driver.find_element_by_android_uiautomator('new UiSelector().text("本金")').click()
+        sleep(3)
+        now=time.strftime("%Y-%m-%d %H_%M_%S")
+        sf0="./"+now+"_004_capital_records_google.png"
+        driver.save_screenshot(sf0)
+        sleep(2)
+        driver.find_element_by_id("com.richfinancial.pujiaosuo:id/channel").click()
+        sleep(2)
+        now=time.strftime("%Y-%m-%d %H_%M_%S")
+        sf1="./"+now+"_004_capital_detail_google.png"
+        driver.save_screenshot(sf1)
+        sleep(2)
                     
 if __name__ == '__main__':
     testunit=unittest.TestSuite()
